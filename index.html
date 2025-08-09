@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACT Values Assessment</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Discover Your Core Values</h1>
+        <p>An assessment tool for Acceptance and Commitment Therapy</p>
+      </header>
+
+      <main>
+        <div id="progress-bar" class="progress-container">
+          <div class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <span id="progress-text" class="progress-text"
+            >0 / 58 values rated</span
+          >
+        </div>
+
+        <div id="rating-phase" class="phase active">
+          <h2>Rate Your Values</h2>
+          <p>For each value below, rate how important it is to you:</p>
+          <div id="value-card" class="value-card">
+            <!-- Value content will be inserted here -->
+          </div>
+          <div class="rating-buttons">
+            <button id="not-important" class="rating-btn not-important">
+              Not Important
+            </button>
+            <button id="quite-important" class="rating-btn quite-important">
+              Quite Important
+            </button>
+            <button id="very-important" class="rating-btn very-important">
+              Very Important
+            </button>
+          </div>
+        </div>
+
+        <div id="comparison-phase" class="phase">
+          <h2>Compare Your Most Important Values</h2>
+          <p>Choose which value is more important to you:</p>
+          <div id="comparison-container">
+            <!-- Comparison content will be inserted here -->
+          </div>
+        </div>
+
+        <div id="results-phase" class="phase">
+          <h2>Your Top Three Values</h2>
+          <div id="results-container">
+            <!-- Results will be inserted here -->
+          </div>
+          <button id="restart-btn" class="restart-btn">Start Over</button>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

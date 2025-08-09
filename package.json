@@ -1,0 +1,32 @@
+{
+  "name": "act-values",
+  "version": "1.0.0",
+  "description": "An interactive way to determine your values for Acceptance and Commitment Therapy",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "format:check": "prettier --check . --ignore-path .gitignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CallumKerson/act-values.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CallumKerson/act-values/issues"
+  },
+  "homepage": "https://github.com/CallumKerson/act-values#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "vite": "^7.1.1"
+  }
+}
