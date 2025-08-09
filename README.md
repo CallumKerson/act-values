@@ -19,8 +19,12 @@ A web-based tool to help identify your top three personal values for use in Acce
 
 ```bash
 npm install
-npm run dev     # Start development server
-npm run build   # Build for production
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run test      # Run tests in watch mode
+npm run test:run  # Run tests once
+npm run test:ui   # Run tests with UI
+npm run format    # Format code with Prettier
 ```
 
 ## Deployment
