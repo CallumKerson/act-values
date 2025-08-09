@@ -11,6 +11,12 @@
       <header>
         <h1>Discover Your Core Values</h1>
         <p>An assessment tool for Acceptance and Commitment Therapy</p>
+        <div id="resume-notice" class="resume-notice hidden">
+          <p>You have a previous assessment in progress.</p>
+          <button id="resume-btn" class="resume-btn">Resume Assessment</button>
+          <button id="start-fresh-btn" class="start-fresh-btn">Start Fresh</button>
+        </div>
+        <button id="reset-btn" class="reset-btn hidden">Reset Assessment</button>
       </header>
 
       <main>
@@ -26,6 +32,16 @@
         <div id="rating-phase" class="phase active">
           <h2>Rate Your Values</h2>
           <p>For each value below, rate how important it is to you:</p>
+          
+          <div id="very-important-counter" class="counter-container">
+            <div class="counter-label">Very Important Values:</div>
+            <div id="counter-display" class="counter-display">
+              <span id="counter-number">0</span>
+              <span class="counter-max">/10 recommended</span>
+            </div>
+            <div id="counter-message" class="counter-message"></div>
+          </div>
+          
           <div id="value-card" class="value-card">
             <!-- Value content will be inserted here -->
           </div>

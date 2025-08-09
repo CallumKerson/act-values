@@ -36,6 +36,70 @@ header p {
   font-size: 1.1rem;
 }
 
+.resume-notice {
+  background: #e8f5e8;
+  border: 2px solid #27ae60;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.resume-notice p {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.resume-btn,
+.start-fresh-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.resume-btn:hover {
+  background: #229954;
+}
+
+.start-fresh-btn {
+  background: #f39c12;
+  color: white;
+}
+
+.start-fresh-btn:hover {
+  background: #d68910;
+}
+
+.reset-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.reset-btn:hover {
+  background: #c0392b;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .progress-container {
   margin-bottom: 30px;
   text-align: center;
@@ -80,6 +144,80 @@ header p {
 .phase p {
   color: #7f8c8d;
   margin-bottom: 30px;
+}
+
+.counter-container {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.counter-container.good {
+  background: #e8f5e8;
+  border-color: #27ae60;
+}
+
+.counter-container.warning {
+  background: #fff3cd;
+  border-color: #f39c12;
+}
+
+.counter-container.danger {
+  background: #f8d7da;
+  border-color: #e74c3c;
+}
+
+.counter-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.counter-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.counter-container.good .counter-display {
+  color: #27ae60;
+}
+
+.counter-container.warning .counter-display {
+  color: #f39c12;
+}
+
+.counter-container.danger .counter-display {
+  color: #e74c3c;
+}
+
+.counter-max {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.counter-message {
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-height: 20px;
+}
+
+.counter-container.good .counter-message {
+  color: #27ae60;
+}
+
+.counter-container.warning .counter-message {
+  color: #d68910;
+}
+
+.counter-container.danger .counter-message {
+  color: #c0392b;
 }
 
 .value-card {

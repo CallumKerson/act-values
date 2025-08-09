@@ -1,12 +1,20 @@
-export class ComparisonPhase {
-  constructor(values) {
-    this.values = values;
-    this.comparisons = this.generateComparisons();
-    this.currentIndex = 0;
-    this.scores = new Map();
+import { StorageManager } from '../utils/storage.js';
 
-    // Initialize scores
-    this.values.forEach(({ id }) => this.scores.set(id, 0));
+export class ComparisonPhase {
+  constructor(values, savedState = null) {
+    if (savedState?.phase === 'comparison') {
+      this.values = savedState.values;
+      this.comparisons = savedState.comparisons;
+      this.currentIndex = savedState.currentIndex;
+      this.scores = new Map(savedState.scores);
+    } else {
+      this.values = values;
+      this.comparisons = this.generateComparisons();
+      this.currentIndex = 0;
+      this.scores = new Map();
+      // Initialize scores
+      this.values.forEach(({ id }) => this.scores.set(id, 0));
+    }
 
     this.init();
   }
@@ -73,7 +81,18 @@ export class ComparisonPhase {
     this.scores.set(winnerValueId, currentScore + 1);
 
     this.currentIndex++;
+    this.saveState();
     this.displayCurrentComparison();
+  }
+
+  saveState() {
+    StorageManager.saveState({
+      phase: 'comparison',
+      values: this.values,
+      comparisons: this.comparisons,
+      currentIndex: this.currentIndex,
+      scores: Array.from(this.scores.entries()),
+    });
   }
 
   updateProgress() {
